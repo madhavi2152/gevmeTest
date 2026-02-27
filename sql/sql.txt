@@ -1,0 +1,20 @@
+i wrote in text editor. hence the syntax errors
+eg: distinct is rewritten as district
+query:
+
+Select 
+c.first_name,
+c.last_name,
+count(o.id) as total_orders
+From customers c
+Join orders o
+on c.id=o.customer_id
+Join orderItems au
+On o.id=oi.orderID
+Join products p
+On oi.product_id=p.id
+Where can I.country=‘SIngapore’
+And o.orderDate>=2023-01-01
+And o.order_date<2024-01-01
+Group by c.id, c.firstNAme, c.lastName
+Having count(district o.id)>5;
